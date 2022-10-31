@@ -6,10 +6,12 @@ Objects are already in S3. We created a bucket called `t2demo` and populated wit
 Request: 
 Enable authenticated users to download S3 objects similar to SFTP methods. 
 
+We will review four options and discuss tradeoffs
+
 ## Methods:
 ### 1 - Authenticated AWS users with appropriate roles can download objects from the S3 console, AWS CLI, AWS SDK. 
 
-AWS CLI is probably the closest to sftp (aws s3 ls s3://t2demo/ and aws s3 cp s3://t2demo/bit.ly_3zdRwgd.png .) 
+AWS CLI is probably the closest to sftp e.g., `aws s3 ls s3://t2demo/` and `aws s3 cp s3://t2demo/bit.ly_3zdRwgd.png` 
 
 ##### Pros - Bucket uses default hardened configuration 
 ##### Cons - Need to grant proper role and attach it to every user
