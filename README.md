@@ -1,10 +1,13 @@
 # How to grant access to S3 bucket 
 
-Assumptions:
-Objects are already in S3. We created a bucket called `t2demo` and populated with few files in the bucket's root. 
-
-Request: 
+#### Goal: 
 Enable authenticated users to download S3 objects similar to SFTP methods. 
+
+#### First thing first:
+* SFTP supports POSIX files. S3 does not support POSIX files (files, directories and sub directories). Instead, S3 object name is the object key e.g., `s3://t2demo/myfile1.txt` or `s3://t2demo/subfolder/myfile1.txt` and the value is the actual file. 
+* No need to `mkdir`, instead just add your psuedo folder structure in the file name like `s3://t2demo/myfile1.txt` or `s3://t2demo/subfolder/myfile1.txt`.
+* Lets assume objects are already in S3. We created a bucket called `t2demo` and populated with few files in the bucket's root. 
+
 
 We will review four options and discuss tradeoffs
 
