@@ -106,19 +106,6 @@ Instead we add more specific `Condition` e.g.,
                     "s3:ExistingObjectTag/team": "prod"
                 }
             }
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Resource": "arn:aws:s3:::t2demo",
-            "Condition": {
-                "StringLike": {
-                    "s3:ExistingObjectTag/team": "prod"
-                }
-            }
         }
     ]
 }
